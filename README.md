@@ -17,6 +17,8 @@ Module for @nuxt/content that enriches the metadata with git & github commit inf
 - 🚠 &nbsp;Bar
 - 🌲 &nbsp;Baz
 
+At the moment it can only fetch the commit data from a public repository
+
 ## Quick Setup
 
 1. Add `nuxt-content-github` dependency to your project

@@ -36,6 +36,7 @@
     "@nuxt/test-utils": "^3.2.3",
     "@nuxtjs/eslint-config-typescript": "latest",
     "changelogen": "^0.5.1",
+    "dayjs": "^1.11.7",
     "eslint": "^8.35.0",
     "nuxt": "^3.2.3",
     "simple-git": "^3.17.0",

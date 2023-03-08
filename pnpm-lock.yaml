@@ -8,6 +8,7 @@ specifiers:
   '@nuxt/test-utils': ^3.2.3
   '@nuxtjs/eslint-config-typescript': latest
   changelogen: ^0.5.1
+  dayjs: ^1.11.7
   eslint: ^8.35.0
   nuxt: ^3.2.3
   simple-git: ^3.17.0
@@ -24,6 +25,7 @@ devDependencies:
   '@nuxt/test-utils': 3.2.3_rollup@3.18.0+vue@3.2.47
   '@nuxtjs/eslint-config-typescript': 12.0.0_ycpbpc6yetojsgtrx3mwntkhsu
   changelogen: 0.5.1
+  dayjs: 1.11.7
   eslint: 8.35.0
   nuxt: 3.2.3_4qi45bbj3jkpb76lupn6crz25q
   simple-git: 3.17.0
@@ -2870,6 +2872,10 @@ packages:
   /data-uri-to-buffer/4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: true
 
   /debug/2.6.9:
