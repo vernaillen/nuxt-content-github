@@ -1,19 +1,28 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import {
+  addServerPlugin,
+  createResolver,
+  defineNuxtModule,
+} from '@nuxt/kit'
 
 // Module options TypeScript inteface definition
 export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
-  meta: {
-    name: 'my-module',
-    configKey: 'myModule'
-  },
   // Default configuration options of the Nuxt module
   defaults: {},
-  setup (options, nuxt) {
-    const resolver = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
-  }
+  meta: {
+    configKey: 'nuxtContentGitHub',
+    name: 'nuxt-content-github',
+  },
+  async setup(options, nuxt) {
+    const resolver = createResolver(import.meta.url)
+    options = {
+      createdAtName: 'created',
+      updatedAtName: 'updated',
+      ...options,
+    }
+    // TODO: How to pass on the options from the module to the Nitro plugin?
+    addServerPlugin(resolver.resolve('./runtime/server/content'))
+  },
 })

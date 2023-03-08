@@ -1,4 +1,12 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
-  myModule: {}
+  modules: [
+    '../src/module',
+    '@nuxt/content',
+  ],
+  content: {
+    documentDriven: true,
+  },
+  nuxtContentGitHub: {
+
+  }
 })

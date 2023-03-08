@@ -1,4 +1,6 @@
-{
-  "private": true,
-  "name": "my-module-playground"
-}
+  {
+    "name": "nuxt-content-github",
+    "scripts": {
+      "build": "nuxt-module-build .. && nuxi prepare && nuxi build"
+    }
+  }
