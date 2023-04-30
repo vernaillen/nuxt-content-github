@@ -6,5 +6,7 @@ Git info:
  * created: {{ $doc.created }}
  * updated: {{ $doc.updated }}
 
+:hr
+
 component:
 :GitInfo
