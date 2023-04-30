@@ -1,6 +1,6 @@
 {
   "name": "nuxt-content-github",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Module for @nuxt/content that enriches the metadata with git & github commit information",
   "license": "MIT",
   "type": "module",
@@ -24,23 +24,31 @@
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "compile": "graphql-codegen",
+    "watch": "graphql-codegen -w"
   },
   "dependencies": {
-    "@nuxt/content": "^2.4.3",
-    "@nuxt/kit": "^3.2.3"
+    "@nuxt/content": "^2.6.0",
+    "@nuxt/kit": "^3.4.3",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "^0.2.1",
-    "@nuxt/schema": "^3.2.3",
-    "@nuxt/test-utils": "^3.2.3",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/schema": "^3.4.3",
+    "@nuxt/test-utils": "^3.4.3",
     "@nuxtjs/eslint-config-typescript": "latest",
-    "changelogen": "^0.5.1",
+    "@types/graphql": "^14.5.0",
+    "axios": "^1.4.0",
+    "changelogen": "^0.5.3",
+    "consola": "^3.1.0",
     "dayjs": "^1.11.7",
-    "eslint": "^8.35.0",
-    "nuxt": "^3.2.3",
-    "simple-git": "^3.17.0",
-    "typescript": "^4.9.5",
-    "vitest": "^0.29.2"
+    "eslint": "^8.39.0",
+    "nuxt": "^3.4.3",
+    "simple-git": "^3.18.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.1"
   }
 }

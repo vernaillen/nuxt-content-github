@@ -1,0 +1,22 @@
+query getCommits($owner: String = "vernaillen", $repo: String = "nuxt-content-github", $branch: String = "main", $contentPath: String = "content/index.md") {
+  repository(owner: $owner, name: $repo) {
+    object(expression: $branch) {
+      ... on Commit {
+        blame(path: $contentPath) {
+          ranges {
+            commit {
+              id
+              author {
+                date
+                email
+                name
+              }
+              committedDate
+              message
+            }
+          }
+        }
+      }
+    }
+  }
+}

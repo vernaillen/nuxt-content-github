@@ -15,14 +15,16 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'nuxtContentGitHub',
     name: 'nuxt-content-github',
   },
-  async setup(options, nuxt) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
-    options = {
+
+    // TODO: pass on the options from the module to the Nitro plugin?
+    /*options = {
       createdAtName: 'created',
       updatedAtName: 'updated',
       ...options,
-    }
-    // TODO: How to pass on the options from the module to the Nitro plugin?
+    }*/
     addServerPlugin(resolver.resolve('./runtime/server/content'))
   },
 })
