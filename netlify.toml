@@ -5,4 +5,4 @@
 [build]
   base = "playground"
   publish = "dist"
-  command = "pnpm run -w build"
+  command = "pnpm run -w dev:build"
